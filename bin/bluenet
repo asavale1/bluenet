@@ -1,0 +1,9 @@
+#!/bin/sh
+
+parent_dir="/opt/bluenet"
+stdout_log="$parent_dir/log/bluenet.log"
+stderr_log="$parent_dir/log/bluenet.err"
+
+. /etc/profile
+
+/usr/bin/python /opt/bluenet/src/bluenet.py >> "$stdout_log" 2>> "$stderr_log" 

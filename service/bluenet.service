@@ -1,0 +1,13 @@
+[Unit]
+Description=Bluenet Service
+After=multi-user.target
+StandardOutput=syslog
+StandardError=syslog
+ 
+[Service]
+Type=simple
+ExecStart=/opt/bluenet/bin/bluenet
+Restart=on-abort
+ 
+[Install]
+WantedBy=multi-user.target
